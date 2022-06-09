@@ -1,125 +1,176 @@
 :root {
-    --link-blu: #274FCD;
-    --header-height: 94px;
+  --blu: #274fcd;
+  --user-color: #1499aa;
+  --gray: #4d5055;
+  --lightgray: #c0bfbf;
+  --icons-hover: #efefef;
+  --header-height: 94px;
+  --menu-icon-container: 42px;
+  --user: 33px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    width: 70%;
-    margin: 0 auto;
+  width: 70%;
+  margin: 0 auto;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 ul {
-    display: flex;
+  display: flex;
 }
 
 .bottom ul li {
-    list-style: none;
-    margin-right: 2.5rem;
-    margin-left: 0;
-    line-height: 2.3rem;
-    font-size: 1rem;
-    font-weight: 400;
-    color: rgb(88, 87, 87);
-    font-family: 'Red Hat Display', sans-serif;
-
-}
-
-.active {
-    color: var(--link-blu);
-    border-bottom: 3px solid var(--link-blu);
+  list-style: none;
+  margin-right: 2.5rem;
+  margin-left: 0;
+  line-height: 3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gray);
+  font-family: "Red Hat Display", sans-serif;
 }
 
 /* HEADER */
 header {
-    background-color: white;
-    width: 100%;
-    height: var(--header-height);
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-bottom: 1px solid lightgray;
-    padding: 0 1.3rem;
+  background-color: white;
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid var(--lightgray);
+  padding: 0 1.3rem;
 }
 
 .top {
-    height: 60%;
-    display: flex;
-    align-items: center;
-    padding-top: .5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-start,
+.top-end {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.menu,
+.account {
+  width: var(--menu-icon-container);
+  height: var(--menu-icon-container);
+  text-align: center;
+  line-height: var(--menu-icon-container);
+  display: inline-block;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  position: relative;
+  top: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu:hover,
+.account:hover {
+  background-color: var(--icons-hover);
+}
+
+.menu img {
+  transform: scale(0.65);
+}
+
+.user {
+  width: var(--user);
+  height: var(--user);
+  line-height: var(--user);
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: 400;
+  font-size: 1.1rem;
+  background-color: var(--user-color);
+  font-family: "Red Hat Display", sans-serif;
+
 }
 
 .bottom {
-    height: 40%;
-    display: flex;
-    align-items: center;
+  height: 40%;
+  display: flex;
+  align-items: center;
 }
 
 .top img {
-    height: 24px;
+  height: 24px;
 }
 
 .top-title {
-    margin-left: .3rem;
-    font-family: 'Red Hat Display', sans-serif;
-    font-weight: 400;
-    font-size: 1.35rem;
-    color: rgb(82, 81, 81);
+  margin-left: 0.3rem;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+  font-size: 1.35rem;
+  color: var(--gray);
+}
+
+.active {
+  color: var(--blu);
+  border-bottom: 3px solid var(--blu);
 }
 
 /* MAIN */
 
 main {
-    margin-top: var(--header-height);
-    padding: 1.5rem 0 .5rem;
+  margin-top: var(--header-height);
+  padding: 1.5rem 0 0.5rem;
 }
 
 h2 {
-    font-family: 'Red Hat Display', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-top: 4rem;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 4rem;
 }
 
 h3 {
-    font-family: 'Red Hat Display', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 a {
-    color: var(--link-blu);
-    text-decoration: none;
+  color: var(--blu);
+  text-decoration: none;
 }
 
 p {
-    font-size: .9rem;
-    line-height: 1.5rem;
-    margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 ol {
-    margin-left: .9rem;
+  margin-left: 0.9rem;
 }
 
 li {
-    margin-left: 1rem;
-    font-size: .9rem;
-    font-weight: 300;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-ol>li>ol {
-    list-style: lower-alpha;
+ol > li > ol {
+  list-style: lower-alpha;
 }

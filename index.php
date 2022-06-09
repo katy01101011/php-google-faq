@@ -140,9 +140,21 @@
     <!-- STAMPO IN HTML -->
     <header>
         <div class="top">
-            <img src="img/google-logo.png" alt="">
-            <div class="top-title">
-                Privacy e termini
+            <div class="top-start">
+                <img src="img/google-logo.png" alt="">
+                <div class="top-title">
+                    Privacy e termini
+                </div>
+            </div>
+            <div class="top-end">
+                <div class="menu">
+                    <img src="img/dots-menu.png" alt="">
+                </div>
+                <div class="account">
+                    <div class="user">
+                        K
+                    </div>
+                </div>
             </div>
         </div>
         <div class="bottom">
@@ -150,11 +162,11 @@
                 <?php foreach ($headerLinks as $link) { ?>
                     <li>
                         <?php
-                            echo $link;
+                        echo $link;
                         ?>
                     </li>
                 <?php } ?>
-                <li class="active">
+                <li class="active" style="color: #274fcd">
                     Domande frequenti
                 </li>
             </ul>
