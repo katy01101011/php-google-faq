@@ -1,0 +1,44 @@
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+a {
+    color: rgb(0, 115, 255);
+    text-decoration: none;
+}
+
+p {
+    font-size: .9rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    padding-left: 1.1rem;
+    font-size: .9rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+ol>li>ol {
+    list-style: lower-alpha;
+}
