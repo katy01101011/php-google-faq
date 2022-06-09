@@ -76,7 +76,6 @@
 
             "answer" => "
             <p>Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:
-
                 <ol>
                     <li>
                         La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
@@ -129,7 +128,38 @@
             </p>",
         ],
     ];
+
+    $headerLinks = [
+        "Introduzione",
+        "Norme sulla privacy",
+        "Termini di servizio",
+        "Tecnologie",
+    ]
     ?>
+
+    <!-- STAMPO IN HTML -->
+    <header>
+        <div class="top">
+            <img src="img/google-logo.png" alt="">
+            <div class="top-title">
+                Privacy e termini
+            </div>
+        </div>
+        <div class="bottom">
+            <ul>
+                <?php foreach ($headerLinks as $link) { ?>
+                    <li>
+                        <?php
+                            echo $link;
+                        ?>
+                    </li>
+                <?php } ?>
+                <li class="active">
+                    Domande frequenti
+                </li>
+            </ul>
+        </div>
+    </header>
 
     <main>
         <div class="container">
