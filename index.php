@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- STYLE -->
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
@@ -26,11 +28,6 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     ?>
-
-    <!-- <a href=''></a> -->
-    <!-- <ol></ol> -->
-    <!-- <li></li> -->
-    <!-- <p></p> -->
 
     <!-- VARIABILI -->
     <?php
@@ -134,11 +131,63 @@
         "Norme sulla privacy",
         "Termini di servizio",
         "Tecnologie",
-    ]
+    ];
+
+    $languages = [
+        "Italiano",
+        "Africaans",
+        "Bahasa Indonesia",
+        "Bahasa Melayu",
+        "Català",
+        "Čeština",
+        "Dansk",
+        "Deutsch",
+        "Eesti",
+        "English",
+        "English (United Kingdom)",
+        "Español",
+        "Español (Latinoamérica)",
+        "Euskara",
+        "Filipino",
+        "Français",
+        "Français (Canada)",
+        "Galego",
+        "Hrvatski",
+        "Isizulu",
+        "Íslenska",
+        "Kiswahili",
+        "Latviešu",
+        "Lietuvių",
+        "Magyar",
+        "Nederlands",
+        "Norsk",
+        "Polski",
+        "Português (Brasil)",
+        "Português (Portugal)",
+        "Română",
+        "Slovenščina",
+        "Srpski",
+        "Suomi",
+        "Svenska",
+        "Tiếng Việt",
+        "Türkçe",
+        "Ελληνικά",
+        "Български",
+        "Русский",
+        "Српски",
+        "Українська",
+        "רעב׳ת",
+        "ﺍﺭﺩﻭ",
+        "ﺍﻟﻌﺮﺑﻴﺔ",
+    ];
     ?>
 
     <!-- STAMPO IN HTML -->
+
+    <!-- HEADER -->
     <header>
+        <!-- Header Top -->
+
         <div class="top">
             <div class="top-start">
                 <img src="img/google-logo.png" alt="">
@@ -157,6 +206,9 @@
                 </div>
             </div>
         </div>
+        <!-- /Header Top -->
+
+        <!-- Header Bottom -->
         <div class="bottom">
             <ul>
                 <?php foreach ($headerLinks as $link) { ?>
@@ -171,9 +223,14 @@
                 </li>
             </ul>
         </div>
-    </header>
+        <!-- /Header Bottom -->
 
+    </header>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
     <main>
+        <!-- Questions And Answers -->
         <div class="container">
             <?php
             foreach ($faq as $element) { ?>
@@ -189,7 +246,52 @@
                 </p>
             <?php }; ?>
         </div>
+        <!-- /Questions And Answers -->
+
     </main>
+    <!-- /MAIN -->
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- Footer Links -->
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li class="list-none">
+                        <a href="">Google</a>
+                    </li>
+                    <li>
+                        <a href="">Tutto su Google</a>
+                    </li>
+                    <li>
+                        <a href="">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="">Termini</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Footer Links -->
+
+            <!-- Select Language -->
+            <div class="select-language">
+                <label class="blu" for="language">
+                    <i class="fas fa-globe"></i>
+                </label>
+                <select name="language" id="language">
+                    <?php foreach($languages as $language) { ?>
+                        <option value="">
+                            <?php
+                                echo $language;
+                            ?>
+                        </option>
+                    <?php } ?>
+                </select>
+            </div>
+            <!-- /Select Language -->
+        </div>
+    </footer>
+    <!-- /FOOTER -->
 </body>
 
 </html>

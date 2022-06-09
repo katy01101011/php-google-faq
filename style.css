@@ -5,6 +5,7 @@
   --lightgray: #c0bfbf;
   --icons-hover: #efefef;
   --header-height: 94px;
+  --footer-height: 47px;
   --menu-icon-container: 42px;
   --user: 33px;
 }
@@ -51,6 +52,8 @@ header {
   border-bottom: 1px solid var(--lightgray);
   padding: 0 1.3rem;
 }
+
+/* Header Top */
 
 .top {
   display: flex;
@@ -104,6 +107,8 @@ header {
   font-family: "Red Hat Display", sans-serif;
 
 }
+
+/* Header Bottom */
 
 .bottom {
   height: 40%;
@@ -164,7 +169,6 @@ ol {
 }
 
 li {
-  margin-left: 1rem;
   font-size: 0.9rem;
   font-weight: 300;
   margin-top: 1rem;
@@ -173,4 +177,50 @@ li {
 
 ol > li > ol {
   list-style: lower-alpha;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: var(--footer-height);
+    background-color: var(--icons-hover);
+}
+
+footer .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer li {
+    margin-right: .65rem;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+.list-none {
+    list-style: none;
+    margin-left: 0;
+}
+
+.select-language {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.select {
+    display: inline-block;
+    width: 200px;
+}
+
+.blu {
+    color: #28bff2;
+    margin-right: .5rem;
 }
